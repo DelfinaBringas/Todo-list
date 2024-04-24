@@ -1,0 +1,54 @@
+body {
+    background-image: url('foto.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+  
+}
+#tarea {
+    width: 400px; 
+    margin-right: 10px; 
+}
+
+.agregar {
+    width: 50px; 
+}
+.agregar button {
+    background-color: #743369;
+    border-color: #000000;
+    color: white;
+}
+
+.container {
+    background-color: #f3c37a; 
+    padding: 20px; 
+    border-radius: 10px; 
+}
+
+
+.card-body {
+    display: flex;
+    align-items: center; 
+    padding-left: 35px;
+    
+}
+
+.btn-danger { /* boton eliminar*/
+    background-color: #743369; 
+    border-color: #000000; 
+    color: white; 
+    margin-right: 20px;
+    width: 100px;
+}
+
+.btn-sm {
+    margin-left: 5px; /* Espacio: eliminar y el checkbox */
+}
+
+.card::before {
+    content: "\2605"; 
+    color: rgb(2, 82, 78); 
+    position: absolute; 
+    top: 5px; 
+    left: 5px; 
+    font-size: 24px; 
+}

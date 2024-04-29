@@ -21,6 +21,20 @@ let tareasSecretaria = [
     { nombre: "Actualizar redes sociales", estado: "incompleto", activo: true }
   ];
 
+//localStorage
+function cargarLocalStorage() {
+    const tareasGuardadas = localStorage.getItem('tareasSecretaria');
+    if (tareasGuardadas) {
+        tareasSecretaria = JSON.parse(tareasGuardadas);
+    }
+}
+
+function guardarLocalStorage() {
+    localStorage.setItem('tareasSecretaria', JSON.stringify(tareasSecretaria));
+}
+
+
+    
   // Función para mostrar las tareas
 function mostrarTareas() {
     let tareas_activas = tareasSecretaria.filter(tarea => tarea.activo === true);
@@ -75,6 +89,9 @@ function agregarTarea(nombreTarea) {
     };
     tareasSecretaria.push(nuevaTarea);
     mostrarTareas();
+
+    guardarLocalStorage(); // llama al localStorage!
+
  // Limpiar la caja de texto
     document.getElementById("tarea").value = "";
 }
@@ -85,6 +102,7 @@ function ObtenerTarea() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    cargarLocalStorage(); //llama al localstorage !
     mostrarTareas();
  });
  

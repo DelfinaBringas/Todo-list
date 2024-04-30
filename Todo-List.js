@@ -90,8 +90,6 @@ function agregarTarea(nombreTarea) {
     tareasSecretaria.push(nuevaTarea);
     mostrarTareas();
 
-    guardarLocalStorage(); // llama al localStorage!
-
  // Limpiar la caja de texto
     document.getElementById("tarea").value = "";
 }
@@ -110,6 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Función para eliminar una tarea
 function eliminarTarea(nombreTarea) {
     tareasSecretaria = tareasSecretaria.filter(tarea => tarea.nombre !== nombreTarea);
+    guardarLocalStorage();
     mostrarTareas();
 }
 

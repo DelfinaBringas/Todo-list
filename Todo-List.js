@@ -88,6 +88,7 @@ function agregarTarea(nombreTarea) {
         activo: true 
     };
     tareasSecretaria.push(nuevaTarea);
+    guardarLocalStorage(); //llama al localstorage !
     mostrarTareas();
 
  // Limpiar la caja de texto
